@@ -23,9 +23,14 @@ function App() {
     },
   ];
 
+  const setNewCost = function (newCost) {
+    console.log(newCost);
+    console.log("App");
+  };
+
   return (
     <div>
-      <AddNewCost />
+      <AddNewCost onAddNewCost={setNewCost} />
       <Costs costs={costs} />
     </div>
   );
