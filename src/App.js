@@ -1,4 +1,5 @@
-import Costs from "./components/Costs";
+import Costs from "./components/Costs/Costs";
+import AddNewCost from "./components/addNewCost/AddNewCost";
 
 function App() {
   const costs = [
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div>
+      <AddNewCost />
       <Costs costs={costs} />
     </div>
   );
