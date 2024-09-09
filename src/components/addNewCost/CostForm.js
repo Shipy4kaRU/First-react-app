@@ -42,6 +42,7 @@ const CostForm = function (props) {
             type="text"
             onChange={setDescriptionHandler}
             value={description}
+            required
           ></input>
         </div>
         <div className="new-cost__control">
@@ -52,6 +53,7 @@ const CostForm = function (props) {
             step="0.01"
             onChange={setAmountHandler}
             value={amount}
+            required
           ></input>
         </div>
         <div className="new-cost__control">
@@ -62,10 +64,14 @@ const CostForm = function (props) {
             max="2025-01-01"
             onChange={setDateHandler}
             value={date}
+            required
           ></input>
         </div>
         <div className="new-cost__actions">
           <button type="submit">Добавить расход</button>
+          <button type="click" onClick={props.onCancel}>
+            Отмена
+          </button>
         </div>
       </div>
     </form>
